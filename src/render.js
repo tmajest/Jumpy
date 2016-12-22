@@ -12,6 +12,7 @@
             p.background(50);
             background.drawBackground();
 
+
             // Draw wall
             p.fill(250);
             p.stroke(210);
