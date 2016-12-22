@@ -8,5 +8,5 @@
     settings.radius = 50;
     settings.gravity = 1;
     settings.jumpForce = 18;
-    settings.backgroundParticles = 230;
+    settings.backgroundParticleCount = 150;
 })(window.settings = window.settings || {});
