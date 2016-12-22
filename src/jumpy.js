@@ -11,6 +11,7 @@
     jumpy.wallSpeed;
     jumpy.jumps;
     jumpy.maxJumps;
+    jumpy.score;
 
     /**
      * Initialize jumpy variables.
@@ -24,6 +25,7 @@
         jumpy.jumps = 0;
         jumpy.maxJumps = 3;
         jumpy.jumping = false;
+        jumpy.score = 0;
     };
 
     /**
@@ -53,13 +55,15 @@
         jumpy.wall.x -= jumpy.wallSpeed;
         if (jumpy.wall.x < -20) {
             jumpy.wall = wall.newWall(jumpy.p5.width);
+            jumpy.score++;
         }
 
         // Stop the game if jumpy hits the fence
         if (jumpy.pos.x + (settings.radius / 2) >= jumpy.wall.x &&
             jumpy.pos.x <= jumpy.wall.x + jumpy.wall.width &&
-            jumpy.pos.y + (settings.radius / 2) >= settings.windowHeight - jumpy.wall.height)
-            jumpy.p5.noLoop();
+            jumpy.pos.y + (settings.radius / 2) >= settings.windowHeight - jumpy.wall.height) {
+                jumpy.p5.noLoop();
+        }
     };
 
     /**

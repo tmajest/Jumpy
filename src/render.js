@@ -30,6 +30,10 @@
 
             jumpy.update();
             background.update();
+
+            p.fill(255);
+            p.text("Score: " + jumpy.score, p.width - 100, p.height - 20);
+
         };
 
         p.keyPressed = function() {
